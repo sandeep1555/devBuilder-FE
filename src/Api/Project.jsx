@@ -11,12 +11,12 @@ export const getProjectAssigneeList = async (project, assigneeText) => {
     return response;
 }
 
-export const createPorject = async (projectName, organisationId) => {
-    const response = await apiClient.post("project/create/" + organisationId, { name: projectName });
+export const createPorject = async (projectName,bgColor, organisationId) => {
+    const response = await apiClient.post("project/create/" + organisationId, { name: projectName,bgColor:bgColor });
     return response
 }
-export const updateProject = async (projectName, projectId) => {
-    const response = await apiClient.put("/project/update/" + projectId, { name: projectName });
+export const updateProject = async (projectName, projectId,bgColor) => {
+    const response = await apiClient.put("/project/update/" + projectId, { name: projectName,bgColor:bgColor });
     return response;
 }
 

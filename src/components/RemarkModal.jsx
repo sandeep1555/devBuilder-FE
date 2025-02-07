@@ -136,9 +136,9 @@ const RemarkModal = ({ closeModal, openModal, taskid }) => {
 			<Modal.Body>
 				<div className="space-y-6" >
 
-					<div className='w-full flex  h-auto '>
+					<div className='w-full flex  items-center h-auto '>
 						<textarea className='w-9/12 md:w-10/12 rounded-md min-h-[40px] dark:text-white dark:bg-gray-600 ' onKeyDown={(e) => e.key === 'Enter' && handleAddCommentButton()} onChange={(e) => setNewComment(e.target.value)} type='text' value={newComment} placeholder='Add a remark' />
-						<Button disabled={newComment === ""} className={`mx-2 md:w-2/12 w-3/12 h-[40px]`} onClick={handleAddCommentButton} color={"blue"}>{isLoading ? <Spinner color="gray" aria-label="Gray spinner example" /> : "add"}</Button>
+						<button disabled={newComment === ""} className={`mx-2 md:w-2/12 w-3/12 h-[40px] bg-customSky dark:bg-customSky dark:hover:bg-customSky text-white rounded-md`} onClick={handleAddCommentButton} >{isLoading ? <Spinner color="gray" aria-label="Gray spinner example" /> : "add"}</button>
 					</div>
 
 					{comments && comments.map((comment) => (

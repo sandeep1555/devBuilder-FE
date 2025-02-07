@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+
 
 export const handleError = (error) => {
 	console.log(error);
@@ -209,10 +209,26 @@ export const darkenHexColor = (hex, percent = 60) => {
 export const getButtonStyles = (bgColor, theme) => {
     const isDarkTheme=theme=="dark" ? true: false;
 	
-  console.log(isDarkTheme)
 	return {
 
 		backgroundColor: isDarkTheme ? "#4B5563" : bgColor, // bg-gray-600 in hex
-		color: isDarkTheme ? "#FFFFFF" : darkenHexColor(bgColor),
+		color: "#FFFFFF",
 	}
 };
+
+
+
+export const colors = [
+	"#024F8A",
+	"#4F46E5", // Indigo
+	"#6366F1", // Blue-Violet
+	"#8B5CF6", // Violet
+	"#A855F7", // Purple
+	"#D946EF", // Fuchsia
+	"#EC4899", // Pink
+	"#06B6D4", // Cyan
+	"#0EA5E9", // Sky Blue
+	"#2563EB", // Royal Blue
+	"#3B82F6", // Blue
+
+];

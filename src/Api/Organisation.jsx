@@ -9,7 +9,6 @@ export const getOrgsanisationDetail = async () => {
 
 
 export const editOrganisationDetails = async (organisationId, name, logo, address1, city, state, country, zip) => {
-    console.log(logo)
     const response = await apiClient.put(BASE_URL + "organisation/update/" + organisationId, { name: name, organisation_type: 1, address1: address1, logo:logo, city: city, state: state, country: country, zip: zip });
     return response;
 }

@@ -10,6 +10,10 @@ export default {
 	darkMode: 'class',
 	theme: {
 		extend: {
+			colors:{
+				customSky:"#024F8A",
+				customSkyLight:"#4184b7",
+			}
 		}
 	},
 	plugins: [

@@ -14,7 +14,6 @@ const ContractorModal = ({ openModal, closeModal, updateContractorList, contract
     const dispatch = useDispatch();
     const handleCreateButton = async () => {
         try {
-            console.log(defaultProject)
             const response = await createContractor(contractorName, defaultProject.projectId);
             updateContractorList();
             closeModal();

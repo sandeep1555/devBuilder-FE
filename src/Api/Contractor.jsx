@@ -15,7 +15,7 @@ export const deleteContractor = async (contractorId) => {
 }
 
 export const createContractor = async (contractorName, projectId) => {
-    console.log(projectId)
+
     const response = await apiClient.post("/contractor/" + projectId + "/", {
         name: contractorName,
 

@@ -316,9 +316,6 @@ const TaskModal = ({ updateTaskList, openModal, closeModal, taskId }) => {
 
 	}
 
-
-	console.log(categoryValue, tagValue)
-
 	//Nature Of Work
 	const handleTagClick = (tag) => {
 
@@ -625,7 +622,7 @@ const TaskModal = ({ updateTaskList, openModal, closeModal, taskId }) => {
 							</Modal.Body>
 						</Modal>
 					</div>}
-				<button type="submit" onClick={() => taskId ? isCreateTaskValid && handleupdateButton() : isCreateTaskValid && handleCreateButton()} className={`text-white flex-inline  items-center ${isCreateTaskValid ? "bg-blue-700 cursor-pointer hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 focus:ring-blue-300 focus:ring-4 focus:outline-none  " : "text-white bg-blue-400 dark:bg-blue-500 cursor-not-allowed font-medium rounded-lg text-sm px-5 py-2.5 text-center"}   font-medium rounded-lg text-sm px-5 py-2.5 text-center `}>{taskId ? "Update Task" : "Create Task"}</button>
+				<button type="submit" onClick={() => taskId ? isCreateTaskValid && handleupdateButton() : isCreateTaskValid && handleCreateButton()} className={`text-white flex-inline  items-center ${isCreateTaskValid ? "bg-customSky cursor-pointer  dark:bg-customSky  dark:focus:ring-blue-800 focus:ring-blue-300 focus:ring-4 focus:outline-none  " : "text-white bg-customSkyLight dark:bg-customSkyLight cursor-not-allowed font-medium rounded-lg text-sm px-5 py-2.5 text-center"}   font-medium rounded-lg text-sm px-5 py-2.5 text-center `}>{taskId ? "Update Task" : "Create Task"}</button>
 			</div>
 		</Modal>
 

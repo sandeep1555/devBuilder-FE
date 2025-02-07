@@ -3,7 +3,6 @@ import apiClient from "../Contexts/authInterceptor";
 
 export const getTaskListApi = async (projectId, url = null, filters) => {
 
-	console.log("Sandeep", projectId)
 	if (url === null) {
 		url = "task/" + projectId + "/list/?"
 		const params = new URLSearchParams();
@@ -39,7 +38,7 @@ export const createTaskListApi = async (taskName, description, unitsValue, maxPr
 }
 
 export const updateTaskListApi = async (taskId, taskName, description, unitsValue, maxProgress, progress, category, tag, project, startDate, endDate) => {
-	console.log(taskId)         //assignee,reporter
+
 	const response = await apiClient.put("task/update/" + taskId + "/", {
 		name: taskName,
 		description: description,

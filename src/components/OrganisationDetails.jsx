@@ -9,7 +9,7 @@ const OrganisationDetails = () => {
     const dispatch = useDispatch();
     const initialState = {
         name: organisation?.name || '',
-        logo: organisation?.logo || '',
+        // logo: organisation?.logo || '',
         address: organisation?.address1 || '',
         city: organisation?.city || '',
         stateName: organisation?.state || '',
@@ -35,17 +35,16 @@ const OrganisationDetails = () => {
             const response = await editOrganisationDetails(
                 organisation._id,
                 formData.name,
-                formData.logo,
+                // formData.logo,
                 formData.address,
                 formData.stateName,
                 formData.city,
                 formData.country,
                 formData.zipcode
             );
-            console.log(response);
             setIsEdited(false); // Reset edit state after successful update
         } catch (err) {
-            console.log(err);
+            handleError(err)
         }
     };
 
@@ -54,7 +53,7 @@ const OrganisationDetails = () => {
         if (organisation) {
             setFormData({
                 name: organisation.name || '',
-                logo: organisation.logo || '',
+                // logo: organisation.logo || '',
                 address: organisation.address1 || '',
                 city: organisation.city || '',
                 stateName: organisation.state || '',
@@ -107,7 +106,7 @@ const OrganisationDetails = () => {
                     ))}
                     <button
                         onClick={handleEditOrganisationDetails}
-                        className={`btn md:ml-[12.5vw] ml-[15vh] mt-4 ${isEdited ? 'bg-blue-500' : 'opacity-70 cursor-not-allowed'}`}
+                        className={`px-4 py-2 bg-customSky text-white rounded-md md:ml-[12.5vw] ml-[15vh] mt-4 ${isEdited ? 'bg-customSky' : 'opacity-70 cursor-not-allowed'}`}
                         disabled={!isEdited}
                     >
                         Edit

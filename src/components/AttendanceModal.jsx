@@ -59,9 +59,7 @@ const AttendanceModal = ({ openModal, closeModal, contractorId, attendanceId, up
     const handleUpdateButton = async () => {
 
         dispatch(removeErrorList());
-        console.log(date)
         const convertDate = convertDateToDatePickerFormat(date);
-        console.log(convertDate)
         try {
             const response = await updateContractorAttendance(Number(defaultProject.projectId), Number(contractorId), Number(attendanceId), convertDate, Number(labourCount));
             closeModal();
@@ -101,7 +99,7 @@ const AttendanceModal = ({ openModal, closeModal, contractorId, attendanceId, up
 
                         <div ref={modalRef} className='relative mb-4'>
                             <label htmlFor="date" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white ">Date</label>
-                            <Datepicker class="dark:bg-gray-600 w-full   max-h-[100px]  rounded-md px-10 dark:text-gray-200 bg-gray-50 dark:placeholder-gray-400 border-gray-300 dark:border-gray-500" onClick={() => setIsOpen(true)} autoHide={true} minDate={!selectedAttendance && new Date()} id="date" name="start_date" onSelectedDateChanged={(date) => { console.log(date); const Date = formatDateToISO(date); setDate(Date); setIsOpen(false); dispatch(removeErrorList()) }} value={date} placeholder="YYYY-MM-DD" />
+                            <Datepicker className="dark:bg-gray-600 w-full   max-h-[100px]  rounded-md  dark:text-gray-200 bg-gray-50 dark:placeholder-gray-400 border-gray-300 dark:border-gray-500" onClick={() => setIsOpen(true)} autoHide={true} minDate={!selectedAttendance && new Date()} id="date" name="start_date" onSelectedDateChanged={(date) => {const Date = formatDateToISO(date); setDate(Date); setIsOpen(false); dispatch(removeErrorList()) }} value={date} placeholder="YYYY-MM-DD" />
                             {errorList && <p className="ml-1 mt-2 text-red-500">{errorList.date}</p>}
                         </div>
                     </div>

@@ -35,7 +35,7 @@ const Header = () => {
 			<Navbar.Brand>
 				<div className="flex items-center justify-center  ">
 					
-							{isLoggedIn() ? <img src={organisation ? organisation.logo : "/public/assets/devduilder-light.PNG"} className="max-h-[62px] 2xl:max-h-16  w-[130px] dark:opacity-40 dark:h-[60px] dark:my-1 " alt="logo" />
+							{isLoggedIn() ? <img src={organisation ? organisation.logo : "/public/assets/devduilder-light.PNG"} className="max-h-[62px] 2xl:max-h-16  w-[130px] dark:opacity-40 dark:h-[60px] dark:my-1 rounded-sm " alt="logo" />
 							: <img src={theme=="light" ? "/public/assets/devduilder-light.PNG" : "/public/assets/devbuilder-dark.PNG"}  className="max-h-[70px] 2xl:max-h-16  w-[130px]"  alt="logo" />}
 					
 

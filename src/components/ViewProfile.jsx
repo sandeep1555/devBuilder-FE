@@ -142,7 +142,7 @@ const ViewProfile = () => {
 
                     <button
                         onClick={handleEditUserDetails}
-                        className={`btn md:ml-[12.5vw] ml-[15vh] mt-4 ${isEdited ? 'bg-blue-500' : 'opacity-70 cursor-not-allowed'}`}
+                        className={`px-4 py-2 bg-customSky text-white rounded-md md:ml-[12.5vw] ml-[15vh] mt-4 ${isEdited ? 'bg-blue-500' : 'opacity-70 cursor-not-allowed'}`}
                         disabled={!isEdited}
                     >
                         Edit

@@ -12,7 +12,6 @@ export const login = async (email, password) => {
 
 export const signUp = async (firstName, lastName, email, password, group) => {
     const response = await axios.post(BASE_URL + "signup", { firstName: firstName, lastName: lastName, emailId: email, password: password, group: group }, { withCredentials: true });
-    console.log(response)
     return response;
 }
 

@@ -66,7 +66,6 @@ const TaskProgressContainer = () => {
 
 	const handleUpdateButton = async () => {
 		try {
-			console.log(progress[selectedTaskId])
 			const progressResponse = await updateProgressApi(selectedTaskId, progress[selectedTaskId]);
 			const commentResponse = comment && await createCommentApi(selectedTaskId, comment);
 			setOpenModal(false);
