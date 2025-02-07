@@ -4,49 +4,49 @@
 
 
 .btn {
-	@apply bg-blue-500 py-2 px-4 rounded-lg text-white
+  @apply bg-blue-500 py-2 px-4 rounded-lg text-white
 }
 
 .truncate-2-lines {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
-  .truncate-1-lines {
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+.truncate-1-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 
 .loading-shimmer {
-	animation: shimmer 2s infinite linear;
-	background: linear-gradient(to right, #eff1f3 4%, #e2e2e2 25%, #eff1f3 36%);
-	background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(to right, #eff1f3 4%, #e2e2e2 25%, #eff1f3 36%);
+  background-size: 1000px 100%;
 }
 
 
 .dark .loading-shimmer {
-	background: linear-gradient(to right, #374151 4%, #374151 25%, #374151 36%);
-  }
+  background: linear-gradient(to right, #374151 4%, #374151 25%, #374151 36%);
+}
 
 .line {
-	height: 20px;
-	width: 300px;
+  height: 20px;
+  width: 300px;
 }
 
 
 @keyframes shimmer {
-	0% {
-		background-position: -1000px 0;
-	}
+  0% {
+    background-position: -1000px 0;
+  }
 
-	100% {
-		background-position: 1000px 0;
-	}
+  100% {
+    background-position: 1000px 0;
+  }
 }
