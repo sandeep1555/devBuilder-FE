@@ -1,0 +1,86 @@
+[
+    {
+        "id":1,
+        "first_name":"Vasu",
+        "last_name":"Deva",
+        "start_date":"2024-06-10",
+        "end_date":"2024-06-18",
+        "description":"this is vasu deva task",
+        "name":"Expired task",
+        "progress":90,
+        "units":"percentage",
+        "category":"D"
+    },
+    {
+        "id":2,
+        "first_name":"Ram",
+        "last_name":"Deva",
+        "start_date":"2024-06-10",
+        "end_date":"2024-06-21",
+        "description":"this is Ram Deva task",
+        "name":"Electrical",
+        "progress":90,
+        "units":"percentage",
+        "category":"D"
+    },
+    {
+        "id":3,
+        "first_name":"Rahul",
+        "last_name":"Narayana",
+        "start_date":"2024-06-15",
+        "end_date":"2024-06-22",
+        "description":"this is Rahul Narayana task",
+        "name":"Civil",
+        "progress":30,
+        "units":"percentage",
+        "category":"C"
+    },
+    {
+        "id":4,
+        "first_name":"Sandeep",
+        "last_name":"Dasari",
+        "start_date":"2024-06-15",
+        "end_date":"2024-06-28",
+        "description":"this is Sandeep Dasari task",
+        "name":"Celiling",
+        "progress":40,
+        "units":"percentage",
+        "category":"B"
+    },
+    {
+        "id":5,
+        "first_name":"Sai",
+        "last_name":"Sampath",
+        "start_date":"2024-06-15",
+        "end_date":"2024-07-01",
+        "description":"this is sai Sampath task",
+        "name":"Carpentry",
+        "progress":20,
+        "units":"percentage",
+        "category":"A"
+    },
+    {
+        "id":6,
+        "first_name":"Ram",
+        "last_name":"Sampath",
+        "start_date":"2024-06-15",
+        "end_date":"2024-06-21",
+        "description":"this is ram sandeep task",
+        "name":"Digging",
+        "progress":100,
+        "units":"percentage",
+        "category":"A"
+    },
+    {
+        "first_name":"Rohan",
+        "last_name":"Sampath",
+        "id":7,
+        "start_date":"2024-06-25",
+        "end_date":"2024-06-30",
+        "description":"this is rohan sampath  task",
+        "name":"Future task",
+        "progress":0,
+        "units":"percentage",
+        "category":"A"
+    }
+]
