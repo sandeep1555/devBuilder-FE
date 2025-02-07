@@ -37,25 +37,25 @@ export const appRouter = createBrowserRouter([
 				path: "/",
 				element: <Login />,
 			},
-			
+
 			{
 				path: "/",
 				element: <MainContainer />,
 				children: [
 
 					{
-						path:"/organisation",
-						element:<OrganisationDetails/>
+						path: "/organisation",
+						element: <OrganisationDetails />
 					},
 					{
-						path:"/profile",
-						element:<ViewProfile/>
+						path: "/profile",
+						element: <ViewProfile />
 					},
 					{
 						path: "/project",
 						element: <ProjectContainer />
 					},
-					
+
 					{
 						path: "/project/task",
 						element: <AggregateTaskContainer />
@@ -65,7 +65,7 @@ export const appRouter = createBrowserRouter([
 						element: <TasksContainer />,
 					},
 					{
-						path:"/project/task/details/:taskName",
+						path: "/project/task/details/:taskName",
 						element: <TasksContainer />
 
 					},
