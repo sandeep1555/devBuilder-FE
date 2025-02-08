@@ -192,7 +192,7 @@ const Login = () => {
 
             <div className='md:flex md:flex-col  hidden  items-center'>
                 <div>
-                <img className='w-[500px] h-[250px]  dark:md:block  hidden' src="assets/devBuilder-dark.PNG" />
+                <img className='w-[500px] h-[250px]  dark:md:block  hidden' src="assets/devbuilder-dark.PNG" />
                 <img className='w-[500px] h-[250px] dark:hidden md:block  hidden' src="assets/devduilder-light.PNG" />
                 </div>
                 <div>

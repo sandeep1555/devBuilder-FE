@@ -70,7 +70,7 @@ const Header = () => {
 							}
 						>
 							<Dropdown.Header className="min-w-[180px] cursor-default" >
-								<span className="block text-sm">Hey, <span className="text-customSky ">{userDetails && userDetails.firstName}</span></span>
+								<span className="block text-sm">Hey, <span className="text-customSky dark:text-gray-400 ">{userDetails && userDetails.firstName}</span></span>
 							</Dropdown.Header>
 
 							<Dropdown.Item icon={CgOrganisation} onClick={() => navigate("/organisation")}>{organisation && organisation.name}</Dropdown.Item>
