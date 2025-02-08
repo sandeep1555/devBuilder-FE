@@ -143,7 +143,7 @@ const TaskProgressContainer = () => {
 
 									</div>
 									<div className='flex justify-center'>
-										{progress && <Button className={`${(error || initialProgress[task.id] == progress[task.id]) ? "cursor-not-allowed opacity-60 pointer-events-none" : ""}`} color="blue" onClick={() => handleUpdateTaskId(task.id)}>Update</Button>}
+										{progress && <button className={` bg-customSky px-4  py-2 text-white rounded-md opacity-90 ${(error || initialProgress[task.id] == progress[task.id]) ? "cursor-not-allowed opacity-40 pointer-events-none" : ""}`}  onClick={() => handleUpdateTaskId(task.id)}>Update</button>}
 										<Modal show={openModal} size="md" onClose={() => setOpenModal(false)} popup className='pt-[200px]' >
 											<Modal.Header />
 											<Modal.Body >

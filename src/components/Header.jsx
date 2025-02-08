@@ -66,11 +66,11 @@ const Header = () => {
 							arrowIcon={false}
 							inline
 							label={
-								<HiOutlineUserCircle className="md:w-[30px] md:h-[30px] w-[40px] h-[40px] ml-4 text-gray-700 dark:text-gray-400  duration-400" />
+								<HiOutlineUserCircle className="md:w-[30px] md:h-[30px] w-[40px] h-[40px] ml-4 text-customSky dark:text-gray-400  duration-400" />
 							}
 						>
 							<Dropdown.Header className="min-w-[180px] cursor-default" >
-								<span className="block text-sm">Hey, {userDetails && userDetails.firstName}</span>
+								<span className="block text-sm">Hey, <span className="text-customSky ">{userDetails && userDetails.firstName}</span></span>
 							</Dropdown.Header>
 
 							<Dropdown.Item icon={CgOrganisation} onClick={() => navigate("/organisation")}>{organisation && organisation.name}</Dropdown.Item>

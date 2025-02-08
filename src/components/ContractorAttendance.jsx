@@ -70,7 +70,7 @@ const ContractorAttendance = () => {
 
     return (
         <div className='mx-1 mt-2'>
-            <h2 className="text-center text-xl font-bold dark:text-white m-2">{defaultProject ? defaultProject.name : ""}</h2>
+            <h2 className="text-center text-3xl font-bold dark:text-white m-2">{defaultProject ? defaultProject.name : ""}</h2>
             <div className='relative flex my-4 mx-4   justify-end '>
                 {userPermissions && userPermissions.includes("add_attendance") && <button style={getButtonStyles(defaultProject?.bgColor, theme)} className="block py-2 pt-2 px-5 mb-2 text-lg font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" onClick={openAttendanceModal}>Add Attendance</button>}
             </div>

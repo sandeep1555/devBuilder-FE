@@ -70,7 +70,7 @@ const ContractorList = () => {
 
     return (
         <div className='mx-2 md:mx-1 mt-2 flex  flex-col items-center'>
-            <h2 className="text-center text-xl font-bold dark:text-white m-2">{defaultProject ? defaultProject.name : ""}</h2>
+            <h2 className="text-center text-3xl font-bold dark:text-white m-2">{defaultProject ? defaultProject.name : ""}</h2>
 
 
             <div className='relative flex mt-4 mx-4 w-full md:w-8/12  justify-end '>

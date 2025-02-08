@@ -30,7 +30,7 @@ const SideBar = () => {
                 {isSideBar && <Sidebar.Items>
 
 
-                    <Sidebar.ItemGroup>
+                    <Sidebar.ItemGroup className='cursor-pointer'>
 
 
                         <Sidebar.Item className="" onClick={()=>{navigate("/project");dispatch(setSideBar(false))}} icon={HiHome}>

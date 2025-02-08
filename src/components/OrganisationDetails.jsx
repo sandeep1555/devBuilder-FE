@@ -6,6 +6,8 @@ import { handleError } from '../Utility/Utility';
 
 const OrganisationDetails = () => {
     const organisation = useSelector((store) => store.organisationData.organisationDetail);
+    const userPermissions = useSelector((store) => store.user.permissions);
+
     const dispatch = useDispatch();
     const initialState = {
         name: organisation?.name || '',
@@ -83,7 +85,7 @@ const OrganisationDetails = () => {
 
 
     return (
-        <div className="m-4 p-4 border-2">
+        <div className="m-4 p-4 border-2 dark:border-gray-500">
             <h1 className="text-center text-2xl font-bold mb-10 dark:text-white">Organisation Details</h1>
             {organisation && (
                 <form onSubmit={(e) => e.preventDefault()} className="max-w-md mx-auto w-full">
@@ -104,13 +106,13 @@ const OrganisationDetails = () => {
 
                         </div>
                     ))}
-                    <button
+                    {(userPermissions && userPermissions.includes("change_organisation")) &&<button
                         onClick={handleEditOrganisationDetails}
                         className={`px-4 py-2 bg-customSky text-white rounded-md md:ml-[12.5vw] ml-[15vh] mt-4 ${isEdited ? 'bg-customSky' : 'opacity-70 cursor-not-allowed'}`}
                         disabled={!isEdited}
                     >
                         Edit
-                    </button>
+                    </button>}
                 </form>
             )}
         </div>

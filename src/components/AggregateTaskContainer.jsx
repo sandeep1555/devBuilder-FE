@@ -153,7 +153,7 @@ const AggregateTaskContainer = () => {
 
     return (
         <div ref={containerRef} className='mx-1 mt-2'>
-            <h2 className="text-center text-xl font-bold dark:text-white m-2">{defaultProject ? defaultProject.name : ""}</h2>
+            <h2 className="text-center text-3xl font-bold dark:text-white m-2">{defaultProject ? defaultProject.name : ""}</h2>
             <div className='relative flex flex-row   md:flex my-4 mx-3 justify-between   md:justify-between '>
                 <input className="relative rounded-md px-4  p-2 md:w-3/12 w-7/12   dark:bg-gray-800 dark:text-white " type="text" value={searchText} placeholder="Search Task..." onChange={(e) => setSearchText(e.target.value)} />
                 {userPermissions && userPermissions.includes("add_task") && <button style={getButtonStyles(defaultProject?.bgColor, theme)} className="block py-2 pt-2 md:w-[120px] w-[120px] px-5 mb-2 text-lg font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" onClick={handleOpenCreateTask}>Add Task</button>}

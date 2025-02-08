@@ -83,7 +83,7 @@ const ViewProfile = () => {
     }, []);
 
     return (
-        <div className="m-4 p-4 border-2">
+        <div className="m-4 p-4 border-2 dark:border-gray-500">
             <h1 className="text-center text-2xl font-bold mb-10 dark:text-white">User Details</h1>
             {userDetails && (
                 <form onSubmit={(e) => e.preventDefault()} className="max-w-md mx-auto w-full">

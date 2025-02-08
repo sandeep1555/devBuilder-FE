@@ -331,7 +331,7 @@ const TasksContainer = () => {
 
 	return !taskList ? <Shimmer /> : (
 		<div className="w-full mx-1  overflow-y-scroll  ">
-			<h2 className="text-center text-xl font-bold dark:text-white m-2">{defaultProject ? defaultProject.name : ""}</h2>
+			<h2 className="text-center text-3xl font-bold dark:text-white m-2">{defaultProject ? defaultProject.name : ""}</h2>
 
 			<div className="md:mx-2 mx-4 md:flex  justify-between  mt-4 overflow-x-scroll">
 				<div className="flex items-center">
