@@ -11,6 +11,7 @@ import { IoEllipsisVerticalSharp } from "react-icons/io5";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
 import { FaUser } from "react-icons/fa";
 import { setTaskCount } from '../Store/taskdataSlice';
+import ShimmerProjectCard from '../Shimmer/ShimmerProjectCard';
 
 
 const ProjectContainer = () => {
@@ -132,13 +133,13 @@ const ProjectContainer = () => {
             </div>
 
 
-            {projectList && projectList.map((project) =>
+            {projectList ? projectList.map((project) =>
             (
 
                 <div key={project._id} onMouseEnter={() => setHoveredProjectId(project.projectId)}
                     onMouseLeave={() => setHoveredProjectId(null)}>
                     <div style={{ borderLeft: `6px solid ${project.bgColor}` }} className={`flex justify-between   max-w-[300px] md:min-h-[180px] min-h-[130px] md:min-w-[320px] min-w-[320px]  bg-gray-100 dark:bg-gray-700   pl-3 pr-0 mx-2 dark:text-black border border-gray-200 rounded-md shadow-sm  dark:border-gray-700 cursor-pointer`} onClick={() => handleProjectCard(project)}>
-                        <div href="#">
+                        <div>
                             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900  dark:text-white mt-4">{project.name.charAt(0).toUpperCase() + project.name.slice(1)}</h5>
                             {project.createdBy && <p className='text-bold text-gray-500   flex   items-center dark:text-white mt-4 '><FaUser className='mr-2 ' />
                                 Created By,<span className=' text-gray-500 dark:text-white font-light italic ml-1'>{" " + project.createdBy}</span></p>}
@@ -166,7 +167,9 @@ const ProjectContainer = () => {
 
 
                 </div>
-            ))}
+            )) : <div className=''>
+                <ShimmerProjectCard />
+            </div>}
 
 
 

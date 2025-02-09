@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { HiOutlineTrash, HiOutlineExclamationCircle, HiPencilAlt } from "react-icons/hi";
 import ContractorModal from './ContractorModal';
 import { useTheme } from '../Contexts/themeContext';
+import ShimmerSmallTable from '../Shimmer/ShimmerSmallTable';
 
 
 
@@ -77,7 +78,7 @@ const ContractorList = () => {
                 {userPermissions && userPermissions.includes("add_contractor") && <button style={getButtonStyles(defaultProject?.bgColor, theme)} className="block py-2 pt-2 px-5 mb-2 text-lg font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" onClick={handleOpenContractorModal}>Add Contractor</button>}
             </div>
             <div className="relative md:w-8/12  w-full  overflow-x-auto shadow-md sm:rounded-lg mt-2 mx-3">
-                <Table hoverable className="table-auto  shadow-lg dark:shadow-3xl ">
+                {contractorList ? <Table hoverable className="table-auto  shadow-lg dark:shadow-3xl ">
 
                     <Table.Head className="w-full md:text-md lg:text-lg text-md  xl:text-xl ">
                         <Table.HeadCell className=" w-6/12">Contractor Name</Table.HeadCell>
@@ -130,7 +131,7 @@ const ContractorList = () => {
 
                     </Table.Body>
 
-                </Table>
+                </Table> : <ShimmerSmallTable />}
             </div>
 
             {/* <div className="flex justify-between md:w-8/12 w-full mt-4">

@@ -31,6 +31,13 @@
 }
 
 
+.loading-projectshimmer {
+  animation: shimmer 0.5s infinite linear;
+  background: linear-gradient(to right, #eff1f3 4%, #e2e2e2 36%, #eff1f3 50%);
+  background-size: 1000px 100%;
+}
+
+
 .dark .loading-shimmer {
   background: linear-gradient(to right, #374151 4%, #374151 25%, #374151 36%);
 }

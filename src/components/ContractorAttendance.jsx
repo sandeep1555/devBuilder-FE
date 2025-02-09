@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom';
 import AttendanceModal from './AttendanceModal';
 import { setErrorList } from '../Store/errorSlice';
 import { useTheme } from '../Contexts/themeContext';
+import ShimmerSmallTable from '../Shimmer/ShimmerSmallTable';
 
 const ContractorAttendance = () => {
 
@@ -77,7 +78,7 @@ const ContractorAttendance = () => {
 
 
             <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-2 mx-3  ">
-                <Table hoverable className="table-auto w-full shadow-lg dark:shadow-3xl">
+                {contractorAttendanceList ? <Table hoverable className="table-auto w-full shadow-lg dark:shadow-3xl">
 
                     <Table.Head className="w-full md:text-md lg:text-lg text-md  xl:text-xl ">
                         <Table.HeadCell className="text-center w-3/12">Date</Table.HeadCell>
@@ -105,7 +106,7 @@ const ContractorAttendance = () => {
 
                     </Table.Body>
 
-                </Table>
+                </Table> : <ShimmerSmallTable />}
             </div>
 
             {/* <div className="m-2 md:m-1 w-auto flex  justify-between items-center pt-1 md:px-2 px-1">

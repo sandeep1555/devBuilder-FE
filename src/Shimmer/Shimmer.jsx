@@ -1,35 +1,39 @@
 import { useSelector } from "react-redux";
 
-
 const Shimmer = () => {
+  const shimmer = [];
+  const taskCount = useSelector((store) => store.taskData.taskCount);
+  const ShimmerLength = taskCount ? taskCount : 3;
 
-	const shimmer = [];
-	const taskCount=useSelector((store)=>store.taskData.taskCount);
-	const ShimmerLength=taskCount ? taskCount : 3;
+  for (let i = 0; i < ShimmerLength; i++) {
+    shimmer.push(
+      <tr key={i} className="animate-pulse ">
+        <td className="px-6 py-4">
+          <div className="bg-gray-700 loading-shimmer h-5 w-5 rounded"></div>
+        </td>
+        <td className="px-6 py-4">
+          <div className="bg-gray-700 loading-shimmer h-5 w-96 rounded"></div>
+        </td>
+        <td className="px-6 py-4">
+          <div className="bg-gray-700 loading-shimmer h-5 w-24 rounded"></div>
+        </td>
+        <td className="px-6 py-4">
+          <div className="bg-gray-700 loading-shimmer h-5 w-24 rounded"></div>
+        </td>
+        <td className="px-6 py-4">
+          <div className="bg-gray-700 loading-shimmer h-7 w-7 rounded-full"></div>
+        </td>
+      </tr>
+    );
+  }
 
-	for (let i = 0; i < ShimmerLength; i++) {
+  return (
+    <div className="mt-10">
+      <table className="w-full border-collapse ">
+        <tbody>{shimmer}</tbody>
+      </table>
+    </div>
+  );
+};
 
-		shimmer.push(
-			<div key={i} className="flex items-center justify-start py-2">
-				<div className="bg-gray-700  loading-shimmer h-[20px] w-[20px] ml-[30px] mr-[140px]"> </div>
-				<div className="bg-gray-700  loading-shimmer h-[20px] w-[400px] mr-[430px]"></div>
-				<div className="bg-gray-700  loading-shimmer h-[20px] w-[100px] mr-[90px]"></div>
-				<div className="bg-gray-700  loading-shimmer h-[20px] w-[100px] mr-[40px]"></div>
-				<div className="bg-gray-700  loading-shimmer h-[30px] w-[30px] mx-2  rounded-full"> </div>
-			</div>
-		)
-
-	}
-
-	return (
-
-		<div className="mt-[100px]">
-
-			{shimmer}
-
-		</div>
-
-	)
-}
-
-export default Shimmer
+export default Shimmer;

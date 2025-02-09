@@ -8,6 +8,7 @@ import { setAggregateList } from '../Store/taskdataSlice';
 import TaskModal from './TaskModal';
 import { DragDropContext, Draggable, Droppable } from "@hello-pangea/dnd"
 import { useTheme } from '../Contexts/themeContext';
+import ShimmerSmallTable from '../Shimmer/ShimmerSmallTable';
 
 const AggregateTaskContainer = () => {
 
@@ -159,7 +160,7 @@ const AggregateTaskContainer = () => {
                 {userPermissions && userPermissions.includes("add_task") && <button style={getButtonStyles(defaultProject?.bgColor, theme)} className="block py-2 pt-2 md:w-[120px] w-[120px] px-5 mb-2 text-lg font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" onClick={handleOpenCreateTask}>Add Task</button>}
             </div>
 
-            <DragDropContext onDragEnd={(results) => handleDragEnd(results)} onDragUpdate={handleDragUpdate} >
+           {aggregateList ? <DragDropContext onDragEnd={(results) => handleDragEnd(results)} onDragUpdate={handleDragUpdate} >
                 <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-2 mx-3 b  ">
                     <Table hoverable className="table-auto w-full shadow-lg dark:shadow-3xl ">
 
@@ -192,7 +193,9 @@ const AggregateTaskContainer = () => {
 
                     </Table>
                 </div>
-            </DragDropContext>
+            </DragDropContext> :
+
+            <ShimmerSmallTable/>}
 
             {openModal && <TaskModal openModal={handleOpenCreateTask} closeModal={handleCloseCreateTask} />}
 
