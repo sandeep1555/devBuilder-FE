@@ -143,7 +143,7 @@ const ProjectContainer = () => {
                             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900  dark:text-white mt-4">{project.name.charAt(0).toUpperCase() + project.name.slice(1)}</h5>
                             {project.createdBy && <p className='text-bold text-gray-500   flex   items-center dark:text-white mt-4 '><FaUser className='mr-2 ' />
                                 Created By,<span className=' text-gray-500 dark:text-white font-light italic ml-1'>{" " + project.createdBy}</span></p>}
-                            <p className='text-bold text-gray-500 my-3 mt-5 pl-1  font-bold  flex  justify-between items-center dark:text-white '>{project.taskCount > 0 && project.taskCount + " " + "Tasks"}</p>
+                            <p className='text-bold text-gray-500 my-3 mt-5   font-bold  flex  justify-between items-center dark:text-white '>{project.taskCount > 0 && project.taskCount + " " + "Tasks"}</p>
                         </div>
                         {/* <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p> */}
                         {/* <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
