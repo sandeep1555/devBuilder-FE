@@ -27,17 +27,17 @@ const Header = () => {
 	}
 
 	useEffect(() => {
-		document.title = organisation ? organisation.name : "ERP";
+		document.title = organisation ? organisation.name : "devBuilder";
 	}, [organisation]);
 
 	return (
 		<Navbar className=" sticky top-0 z-30 shadow-md   py-1 sm:px-4   px-4 min-h-[70px]  dark:border-b dark:border-gray-500  " fluid rounded >
 			<Navbar.Brand>
 				<div className="flex items-center justify-center  ">
-					
-							{isLoggedIn() ? <img src={organisation ? organisation.logo : "assets/devduilder-light.PNG"} className="max-h-[62px] 2xl:max-h-16  w-[130px] dark:opacity-40 dark:h-[60px] dark:my-1 rounded-sm " alt="logo" />
-							: <img src={theme=="light" ? "assets/devduilder-light.PNG" : "assets/devbuilder-dark.PNG"}  className="max-h-[70px] 2xl:max-h-16  w-[130px]"  alt="logo" />}
-					
+
+					{isLoggedIn() ? <img src={organisation ? organisation.logo : "assets/devduilder-light.PNG"} className="max-h-[62px] 2xl:max-h-16  w-[130px] dark:opacity-40 dark:h-[60px] dark:my-1 rounded-sm " alt="logo" />
+						: <img src={theme == "light" ? "assets/devduilder-light.PNG" : "assets/devbuilder-dark.PNG"} className="max-h-[70px] 2xl:max-h-16  w-[130px]" alt="logo" />}
+
 
 				</div>
 			</Navbar.Brand>
