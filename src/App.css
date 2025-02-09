@@ -1,20 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 .typist {
-    font-family: "Caveat", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    letter-spacing: 0.1em;
-    font-weight: bold,
+  font-family: "Caveat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  font-weight: bold,
 }
 
 
-.ibmPlex
-{
-    font-family: "IBM Plex Sans", serif;
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
+.ibmPlex {
+  font-family: "IBM Plex Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+
+
+#tabs button {
+  color: #000000;
+  outline: none !important;
+  /* Remove default outline */
+  box-shadow: 0 0 0 0 #024F8A !important;
+  /* Blue focus ring */
+
+}
+
+#tabs button:focus {
+  color: #024F8A;
+  border-bottom: 2px solid #024F8A;
 }

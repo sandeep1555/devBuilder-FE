@@ -102,12 +102,12 @@ const TaskProgressContainer = () => {
 		<div className='my-4 mx-2  '>
 			<div>
 				<div className='shadow-lg rounded-md mt-3 '>
-					<Tabs className='focus:ring-0 px-0 py-0  ' aria-label="Tabs with underline" variant="underline" onActiveTabChange={() => { setComment(""); setProgress(initialProgress) }} >
+					<Tabs id="tabs" className='focus:ring-0 px-0 py-0    ' aria-label="Tabs with underline" variant="underline" onActiveTabChange={() => { setComment(""); setProgress(initialProgress) }} >
 
 						{selectedTask && selectedTask.map((task, index) =>
 						(
 
-							<Tabs.Item active={index === 0} className='custom-tab custom-tab-active' key={task.id} title={task.tag ? task.tag.name : task.category.name}>
+							<Tabs.Item active={index === 0} className='  custom-tab-active   ' key={task.id} title={task.tag ? task.tag.name : task.category.name}>
 
 								<div className="w-full" >
 									<div className='flex justify-center items-center w-auto font-bold text-2xl'>
@@ -143,7 +143,7 @@ const TaskProgressContainer = () => {
 
 									</div>
 									<div className='flex justify-center'>
-										{progress && <button className={` bg-customSky px-4  py-2 text-white rounded-md opacity-90 ${(error || initialProgress[task.id] == progress[task.id]) ? "cursor-not-allowed opacity-40 pointer-events-none" : ""}`}  onClick={() => handleUpdateTaskId(task.id)}>Update</button>}
+										{progress && <button className={` bg-customSky px-4  py-2 text-white rounded-md opacity-90 ${(error || initialProgress[task.id] == progress[task.id]) ? "cursor-not-allowed opacity-40 pointer-events-none" : ""}`} onClick={() => handleUpdateTaskId(task.id)}>Update</button>}
 										<Modal show={openModal} size="md" onClose={() => setOpenModal(false)} popup className='pt-[200px]' >
 											<Modal.Header />
 											<Modal.Body >

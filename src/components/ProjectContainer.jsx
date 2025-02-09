@@ -117,10 +117,10 @@ const ProjectContainer = () => {
         <div className='m-4 flex  justify-center md:justify-start  flex-wrap gap-2 gap-y-4   '>
 
 
-            <div className="max-w-sm  md:min-h-[150px] min-h-[100px] md:min-w-[300px] min-w-[300px] p-6 mx-2 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 cursor-pointer" onClick={() => setOpenModal(true)}>
+            <div className="flex justify-center items-center max-w-sm  md:min-h-[180px] min-h-[100px] md:min-w-[320px] min-w-[320px] p-6 mx-2 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 cursor-pointer" onClick={() => setOpenModal(true)}>
                 <div className='flex flex-col items-center justify-center '>
-                    <GoPlus className='md:w-16 md:h-16 w-8 h-8 dark:text-white  text-customSky ' />
-                    <h5 className="mb-2 md:text-xl text-md font-bold tracking-tight text-gray-900 dark:text-white">create Project</h5>
+                    <GoPlus className='md:w-16 md:h-16 w-12 h-12 dark:text-white  text-customSky ' />
+                    <h5 className="mb-2 md:text-xl text-md font-bold tracking-tight text-gray-900 dark:text-white">Create Project</h5>
                 </div>
                 {/* <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p> */}
                 {/* <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -137,12 +137,12 @@ const ProjectContainer = () => {
 
                 <div key={project._id} onMouseEnter={() => setHoveredProjectId(project.projectId)}
                     onMouseLeave={() => setHoveredProjectId(null)}>
-                    <div style={{ borderLeft: `6px solid ${project.bgColor}` }} className={`flex justify-between  max-w-[300px] md:min-h-[150px] bg-gray-100 dark:bg-gray-700  min-h-[100px] md:min-w-[300px] min-w-[300px]  pl-3 pr-0 mx-2 dark:text-black border border-gray-200 rounded-md shadow-sm  dark:border-gray-700 cursor-pointer`} onClick={() => handleProjectCard(project)}>
+                    <div style={{ borderLeft: `6px solid ${project.bgColor}` }} className={`flex justify-between   max-w-[300px] md:min-h-[180px] min-h-[130px] md:min-w-[320px] min-w-[320px]  bg-gray-100 dark:bg-gray-700   pl-3 pr-0 mx-2 dark:text-black border border-gray-200 rounded-md shadow-sm  dark:border-gray-700 cursor-pointer`} onClick={() => handleProjectCard(project)}>
                         <div href="#">
                             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900  dark:text-white mt-4">{project.name.charAt(0).toUpperCase() + project.name.slice(1)}</h5>
-                            {project.createdBy && <p className='text-bold text-gray-500   flex  justify-between items-center dark:text-white mt-2 '><FaUser className='mr-2 ' />
-                                Created By,<span className=' text-gray-500 dark:text-white font-light italic'>{" " + project.createdBy}</span></p>}
-                            <p className='text-bold text-gray-500 mt-6 pl-1  font-bold  flex  justify-between items-center dark:text-white '>{project.taskCount > 0 && project.taskCount + " " + "Tasks"}</p>
+                            {project.createdBy && <p className='text-bold text-gray-500   flex   items-center dark:text-white mt-4 '><FaUser className='mr-2 ' />
+                                Created By,<span className=' text-gray-500 dark:text-white font-light italic ml-1'>{" " + project.createdBy}</span></p>}
+                            <p className='text-bold text-gray-500 my-3 mt-5 pl-1  font-bold  flex  justify-between items-center dark:text-white '>{project.taskCount > 0 && project.taskCount + " " + "Tasks"}</p>
                         </div>
                         {/* <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p> */}
                         {/* <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
